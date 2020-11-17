@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* Body */
+
+
+.why-title{
+		margin-top: 120px;
+		margin-left: 32px;
+		margin-right: 32px;
+
+}
+
+
+.why-title img{
+	display: flex;
+	justify-content: center;
+  margin: 0 auto 0 auto;
+}
+
+.goals-fin{
+	display:flex;
+}

@@ -1,0 +1,301 @@
+@charset "UTF-8";
+/* Body */
+
+html {
+	font-family: 'Work Sans', sans-serif;
+	text-decoration: none;
+	color: black;
+	min-height:100%;
+}
+
+body{
+	/*background-image: url("../images/hello-i-m-nik-MAgPyHRO0AA-unsplash.jpg");*/
+	background-color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	position: sticky;
+	overflow: hidden;
+	width: 100%;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	color: black;
+}
+
+nav ul{
+	text-decoration: none;
+	text-align: right;
+	margin-left: 32px;
+	margin-right: 32px;
+	padding: 0;
+}
+
+nav ul li{
+		display: inline-block;
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+
+	li a:link {
+  color: #dfe6f3;
+	text-decoration: none;
+}
+
+	li a:hover {
+	text-decoration: line-through;
+	transition: width 2s;
+}
+
+	li a.active{
+	text-decoration: line-through;
+	color: black;
+}
+
+li a::after{
+	color:#dfe6f3;
+}
+
+/* GRID INDEX */
+.grid-container {
+	display: grid;
+	grid-template-rows: auto;
+  grid-gap: 12px;
+	justify-content: center;
+	align-items: center;
+	/*width: 100%;*/
+	margin-left: 32px;
+	margin-right: 32px;
+	height: auto;
+}
+
+/* empty div items in gridcontainer */
+.item1, .item3, .item4, .item5, .item6 {
+	height: 0;
+}
+
+/* HI STRANGER - LIST DECORATION */
+
+.hide {
+	display: inline-block;
+  justify-content: center;
+  list-style-type: none;
+	list-style-position: inside;
+  padding: 0;
+  margin: 0;
+}
+
+/* hide element */
+.hide-item{
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+  margin: 0 auto 0 auto;
+	transition-duration: 0.6s;
+}
+
+
+.hide:hover .hide-item,
+.hide:focus .hide-item {
+  opacity: 1;
+	transition: ease-in 1s;
+/*
+  alternatively:
+  opacity: 0%;
+  filter: opacity(0%);
+*/
+}
+
+.grid-container h1{
+	animation: 1s ease-out 0s 1;
+}
+
+h1{
+	font-size: 80px;
+	font-weight: bolder;
+	line-height: 0.9;
+	margin-bottom: 32px;
+	text-align: center;
+}
+
+h2{
+	font-size: 50px;
+	font-weight: bolder;
+	line-height: 0.9;
+	margin-bottom: 32px;
+	text-align: left;
+}
+
+h3{
+	font-size: 50px;
+	font-weight: bolder;
+	line-height: 0.9;
+	margin-bottom: 32px;
+	text-align: center;
+}
+
+p {
+	line-height: 1.7;
+	color: grey;
+	text-align: center;
+}
+
+/* FOOTER */
+
+footer{
+	display: flex;
+	width: 100%;
+	height: 100px;
+	position: fixed
+  left: 0;
+  bottom: 0;
+	/* overflow: scroll; */
+	font-size: 12px;
+	background-image: linear-gradient(white, #dfe6f3);
+	color: black;
+}
+
+footer div {
+	align-self: center;
+}
+
+.copyright{
+	text-align: center;
+	margin: auto;
+}
+/* Call to Action Button */
+
+.hit-btn-contact{
+	transition: transform .2s;  /*Animation */
+	background-color: white;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: none;
+	text-align: center;
+	position: fixed;
+  bottom: 50px;
+  right: 50px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hit-btn-contact img{
+	position: relative;
+	-webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+	height: 32px;
+	width: auto;
+	margin-top: 15%;
+}
+
+.call-to-action{
+	text-align: center;
+	margin: 0;
+	color: black;
+	font-size: 10px;
+}
+
+.hit-btn-contact:hover{
+	background-color: #FFCA4B;
+	transform: scale(1.2);
+}
+
+/* Pop Up Contact Form */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+	display: block;
+  background-color: #fefefe;
+  margin: 6% auto; /* 15% from the top and centered */
+  padding: 20px;
+	border: none;
+ 	border-radius: 24px;
+	width: 80%;  /* Could be more or less, depending on screen size */
+	height: auto;
+}
+
+.modal-content h1{
+	text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-row{
+	display: flex;
+}
+
+.modal-col{
+	display: flex;
+ float: left;
+ width: 50%;
+ margin-top: 6px;
+ padding: 20px;
+}
+
+/* Contact Form */
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px;  /*Some padding */
+	background-color: #F5F5F5;
+	border: none;
+  /* border-bottom: 1px solid black;  Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=text]{
+	height: 32px;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #FF9636;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+	justify-content: flex-end;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #FFBC1D;
+}
